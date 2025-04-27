@@ -23,17 +23,14 @@ void calculateEMI(float principal, float rate, int months)
     r = rate / (12 * 100);
     t = months;
     emi = (principal * r * pow(1 + r, t)) / (pow(1 + r, t) - 1);
-    printf("The EMI for the loan is: %.2f\n", emi);
+    printf("Monthly EMI is= %.2f\n", emi);
 }
 int main()
 {
     float principal, rate;
     int months;
-    printf("Enter the principal amount: ");
     scanf("%f", &principal);
-    printf("Enter the rate of interest (annual percentage): ");
     scanf("%f", &rate);
-    printf("Enter the number of months: ");
     scanf("%d", &months);
     calculateEMI(principal, rate, months);
     return 0;
@@ -41,7 +38,8 @@ int main()
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/bfb9b519-ddaf-4340-afeb-18ff03a11801)
+![image](https://github.com/user-attachments/assets/ad370d66-29be-44b1-a45f-ac312dda561b)
+
 
 
 
@@ -90,9 +88,7 @@ int main()
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/ac42d496-203d-4942-95bc-2c6e8cb144ba)
-
-![image](https://github.com/user-attachments/assets/3b2443e8-5611-4329-abba-6c0dfe931954)
+![image](https://github.com/user-attachments/assets/b693af66-4a3b-4d86-a306-c5761644c1a3)
 
 
 
@@ -122,25 +118,26 @@ To write a C program to read n elements as input and print the last element of t
 
 ## PROGRAM
 ```python
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int n, i;
-    printf("Enter the number of elements: ");
-    scanf("%d", &n);
-    int arr[n];
-    printf("Enter %d elements:\n", n);
-    for (i = 0; i < n; i++)
-    {
-       scanf("%d", &arr[i]);
-    }
-    printf("The last element is: %d\n", arr[n - 1]);
-    return 0;
+   int n,i;
+   scanf("%d",&n);
+   int arr[n];
+   for (i=0;i<n;i++)
+  {
+     scanf("%d",&arr[i]);
+  }
+
+  if (n>0) printf("%d\n",arr[n-1]);
+  else printf(" ");
 }
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/7aa9f82a-af98-46d2-a70e-e3f9314894e1)
+![image](https://github.com/user-attachments/assets/009e2881-9637-45dc-a12f-3f7817f77f1e)
+
+
 
 
 
@@ -171,28 +168,27 @@ To write a C Program to count total number of positive elements in an array.
 
 ## PROGRAM
 ```python
-#include <stdio.h>
-int main() {
-     int n, count = 0;
-     printf("Enter the number of elements: ");
-     scanf("%d", &n);
-     int arr[n];
-     printf("Enter %d elements:\n", n);
-     for (int i = 0; i < n; i++) {
-          scanf("%d", &arr[i]);
-     }
-     for (int i = 0; i < n; i++) {
-          if (arr[i] > 0) {
-              count++;}
-     }
-     printf("Total number of positive elements: %d\n", count);
-     return 0;
+#include<stdio.h>
+int main()
+{
+   int n,i;
+   scanf("%d",&n);
+   int arr[n],count_pos=0,count_neg=0;
+   for (i=0;i<n;i++)
+   {
+       scanf("%d",&arr[i]);
+       if (arr[i]>0) count_pos++;
+       else count_neg++;
+   }
+   printf("count of positive numbers in array: %d\n",count_pos);
+   printf("count of negative numbers in array: %d",count_neg);
 }
 ```
 
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/7bc5ff33-869f-4b51-953a-1711e8a7f551)
+![image](https://github.com/user-attachments/assets/ac522483-ab26-42ba-94d9-a92a7174111f)
+
 
 
 
@@ -257,7 +253,8 @@ int main() {
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/6607abbe-254f-4fa8-ac9b-5cbb1e14d3e4)
+![image](https://github.com/user-attachments/assets/999ab077-a1d9-41fa-9583-2c35861e2c4f)
+
 
  
 
